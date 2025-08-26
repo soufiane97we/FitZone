@@ -1,0 +1,47 @@
+ FitZone — Site vitrine sportif
+
+FitZone est un projet fictif réalisé dans le cadre de mon apprentissage du développement front-end.  
+Il s’agit d’un site vitrine responsive pour une salle de sport, qui présente les services, les tarifs, les horaires, une page d’inscription et une page contact.
+
+ Structure du projet
+fitzone/
+│── index.html → Accueil (Hero + CTA)
+│── services.html → Services
+│── plans.html → Plans & Tarifs
+│── horaires.html → Horaires
+│── inscription.html → Inscription
+│── contact.html → Contact
+│
+├── assets/
+│ ├── css/ → Styles (style.css, navbar.css, responsive.css)
+│ ├── js/ → Scripts (main.js, horaires.js)
+│ ├── images/ → Logo, Hero, Services, Tarifs
+│ └── fonts/ → Montserrat, Roboto, Poppins
+│
+└── README.md
+
+
+ Pages
+
+- Accueil : Hero avec image immersive, slogan et CTA *Je m’inscris*  
+- Services : 6 cartes (coaching, cours collectifs, nutrition, accès 24/7, cardio/musculation, coaching en ligne)  
+- Plans & Tarifs : 3 packs comparatifs (Basic, Standard, Premium)  
+- Horaires : planning hebdomadaire avec filtres (Yoga, HIIT, Cardio)  
+- Inscription : formulaire simple (HTML → Google Sheets ou backend)  
+- Contact : coordonnées, réseaux sociaux et mentions légales  
+
+ Identité visuelle
+
+Couleurs principales : 
+  - Vert `#2ecc71` → accents / CTA  
+  - Bleu foncé `#1e293b` → titres / header  
+  - Blanc `#ffffff` → fond principal  
+  - Gris clair `#f1f5f9` → sections alternées  
+  - Orange `#f97316` → hover, boutons secondaires  
+  - Jaune `#facc15` → badges, labels  
+
+- Polices :  
+  - Titres → *Montserrat Bold*  
+  - Textes → *Roboto Regular*  
+  - Boutons/CTA → *Poppins Semi-Bold*  
+
