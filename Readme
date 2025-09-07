@@ -24,10 +24,10 @@ fitzone/
  Pages
 
 - Accueil : Hero avec image immersive, slogan et CTA *Je m’inscris*  
-- Services : 6 cartes (coaching, cours collectifs, nutrition, accès 24/7, cardio/musculation, coaching en ligne)  
+- Services : 6 cartes (coaching, cours collectifs, nutrition, , cardio/musculation, coaching en ligne)  
 - Plans & Tarifs : 3 packs comparatifs (Basic, Standard, Premium)  
 - Horaires : planning hebdomadaire avec filtres (Yoga, HIIT, Cardio)  
-- Inscription : formulaire simple (HTML → Google Sheets ou backend)  
+- Inscription : formulaire simple   
 - Contact : coordonnées, réseaux sociaux et mentions légales  
 
 
