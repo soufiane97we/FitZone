@@ -30,18 +30,5 @@ fitzone/
 - Inscription : formulaire simple (HTML → Google Sheets ou backend)  
 - Contact : coordonnées, réseaux sociaux et mentions légales  
 
- Identité visuelle
 
-Couleurs principales : 
-  - Vert `#2ecc71` → accents / CTA  
-  - Bleu foncé `#1e293b` → titres / header  
-  - Blanc `#ffffff` → fond principal  
-  - Gris clair `#f1f5f9` → sections alternées  
-  - Orange `#f97316` → hover, boutons secondaires  
-  - Jaune `#facc15` → badges, labels  
-
-- Polices :  
-  - Titres → *Montserrat Bold*  
-  - Textes → *Roboto Regular*  
-  - Boutons/CTA → *Poppins Semi-Bold*  
 
