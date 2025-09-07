@@ -1,107 +1,668 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FitZone</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitZone</title>
+  <meta name="description" content="FitZone : programmes personnalisés, cours collectifs, suivi nutrition et accès 24/7 à Montréal.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/logo.webp" alt="logo-fitzone">
-            <nav>
-            <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="services">Services</a></li>
-            <li><a href="tarifs">Tarifs</a></li>
-            <li><a href="horaires">Horaires</a></li>
-            <li><a href="inscription">Inscription</a></li>
-            <li><a href="contact">Contact</a></li>
-           </ul>
-            </nav>
-        </div>
-    </header>
-    <main>
-        <section class="hero-section">
-            <img src="images/Hero section.webp" alt="hero section">
-              <h1 class="titre">FitZone – Là où commence ta meilleure version</h1>
-              <p class="sous-titre">Des programmes personnalisés, un environnement moderne et une motivation sans limite.</p>
-              <button class="btn-primary">Je m’inscris</button>
-        </section>
-         <!-- Services -->
-          <section id="services">
-            <h2> Nos services</h2>
-            <div class="services-grid">
-            <article class="services-card">
-                <img src="images/service-coaching.jpg" alt="Coaching personnalisé">
-                <h3>Coaching personnalisé</h3>
-                <p>un plan adapte a tes objectifs avec suivi régulier. </p>
-            </article>
 
-            <article class="services-card">
-                <img src="images/service-coaching.jpg" alt="Cours collectifs">
-                <h3>Cours collectifs</h3>
-                <p>Travaille ton énergie avec nos cours variés, encadrés par des coachs passionnés. </p>
-            </article>
-            </div>
-           <article class="services-card">
-                <img src="images/service-nutrition.jpg" alt="Suivi nutrition">
-                <h3>Suivi nutrition</h3>
-                <p>Découvre des plans alimentaires équilibrés qui s’intègrent facilement à ton quotidien</p>
-            </article>
-            <article class="services-card">
-                <img src="images/service-cardio.jpg" alt="Zone cardio & musculation">
-                <h3>Zone cardio & musculation</h3>
-                <p>Que tu sois débutant ou confirmé, nos équipements s’adaptent à tes objectifs</p>
-            </article>
-            <article class="services-card">
-                <img src="images/service-enligne.jpg" alt=" service en ligne">
-                <h3>service en ligne</h3>
-                <p>Reste accompagné même à distance avec un suivi digital personnalisé.</p>
-            </article>
-            </div>
-          </section>
-           <!-- Tarifs -->
-            <section id="Tarifs" class="pricing">
-                <h2>Plans & Tarifs</h2>
-                <!-- Pack Basic -->
-                 <article class="pricing-card">
-                    <h3>Basic</h3>
-                    <p class="price">29$/mois</p>
-                    <ul>
-                        <li>Accès à la salle de sport</li>
-                        <li>2 cours collectifs / semaine</li>
-                        <li>Suivi de base</li>
-                    </ul>
-                      <a href="#inscription" class="btn">Choisir Basic</a>
-                 </article>
-                  <!-- Pack standard -->
-                 <article class="pricing-card highlight">
-                    <div class="badge"> Le plus popuplaire</div>
-                    <h3>Standard</h3>
-                    <p class="price">49$/mois</p>
-                    <ul>
-                        <li>Accès illimité de sport</li>
-                        <li>5 cours collectifs / semaine</li>
-                        <li>Coaching personnalisé (1x/mois)</li>
-                        <li>Programme nutrition simple</li>
-                    </ul>
-                      <a href="#inscription" class="btn">Choisir Standard</a>
-                 </article>
-                 <!-- Pack Premium -->
-                  <article class="pricing-card ">
-                    <h3>Premium</h3>
-                    <p class="price">200$/mois</p>
-                    <ul>
-                        <li>Accès illimité à la salle</li>
-                        <li>Tous les cours collectifs inclus</li>
-                        <li>Coaching personnalisé chaque semaine</li>
-                        <li>Programme nutrition avancé</li>
-                        <li>Suivi via application mobile</li>
-                    </ul>
-                      <a href="#inscription" class="btn">Choisir Premium </a>
-                 </article>
-            </section>
-    </main>
+  <!-- Lien d'évitement -->
+  <a class="skip-link" href="#main">Aller au contenu principal</a>
+
+  <!-- ===== Header / Navigation ===== -->
+  <header>
+    <div class="logo" aria-label="FitZone">FitZone</div>
+
+    <button class="burger" aria-label="Menu principal" aria-expanded="false" aria-controls="main-nav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="main-nav" aria-label="Navigation principale">
+      <ul>
+        <li><a href="#hero">Accueil</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#tarifs">Tarifs</a></li>
+        <li><a href="#horaires">Horaires</a></li>
+        <li><a href="#inscription">Inscription</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ===== Hero ===== -->
+    <section id="hero" class="hero-section" aria-labelledby="hero-title">
+      <div class="hero-content">
+        <h1 id="hero-title">FitZone – Là où commence ta meilleure version</h1>
+        <p class="sous-titre">Des programmes personnalisés, un environnement moderne et une motivation sans limite.</p>
+        <a class="btn-primary" href="#inscription">Je m’inscris</a>
+      </div>
+
+      <div class="hero-image" aria-hidden="true">
+        <img src="images/hero-section.webp" alt="">
+      </div>
+    </section>
+
+    <!-- ===== Services ===== -->
+    <section id="services" aria-labelledby="services-title">
+      <h2 id="services-title">Nos services</h2>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <img src="images/service-coaching.jpg" alt="Coaching personnalisé avec suivi régulier">
+          <h3>Coaching personnalisé</h3>
+          <p>Un plan adapté à tes objectifs avec suivi régulier.</p>
+        </article>
+
+        <article class="service-card">
+          <img src="images/service-collectif.jpg" alt="Cours collectifs encadrés par des coachs">
+          <h3>Cours collectifs</h3>
+          <p>Cours variés, encadrés par des coachs passionnés.</p>
+        </article>
+
+        <article class="service-card">
+          <img src="images/service-nutrition.jpg" alt="Suivi nutrition équilibré">
+          <h3>Suivi nutrition</h3>
+          <p>Des plans alimentaires simples à suivre au quotidien.</p>
+        </article>
+
+       
+
+        <article class="service-card">
+          <img src="images/service-cardio.jpg" alt="Zone cardio et musculation">
+          <h3>Zone cardio &amp; musculation</h3>
+          <p>Équipements modernes pour progresser.</p>
+        </article>
+
+        <article class="service-card">
+          <img src="images/service-enligne.jpg" alt="Coaching en ligne personnalisé">
+          <h3>Coaching en ligne</h3>
+          <p>Suivi digital personnalisé à distance.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Tarifs ===== -->
+    <section id="tarifs" class="pricing" aria-labelledby="tarifs-title">
+      <h2 id="tarifs-title">Plans &amp; Tarifs</h2>
+
+      <div class="pricing-grid">
+        <article class="pricing-card" aria-label="Offre Basic">
+          <h3>Basic</h3>
+          <p class="price">29&nbsp;$/mois</p>
+          <ul>
+            <li>Accès à la salle de sport</li>
+            <li>2 cours collectifs / semaine</li>
+            <li>Suivi de base</li>
+          </ul>
+          <a href="#inscription" class="btn">Choisir Basic</a>
+        </article>
+
+        <article class="pricing-card highlight" aria-label="Offre Standard">
+          <div class="badge" aria-hidden="true">Le plus populaire</div>
+          <h3>Standard</h3>
+          <p class="price">49&nbsp;$/mois</p>
+          <ul>
+            <li>Accès illimité à la salle</li>
+            <li>5 cours collectifs / semaine</li>
+            <li>Coaching personnalisé (1x/mois)</li>
+            <li>Programme nutrition simple</li>
+          </ul>
+          <a href="#inscription" class="btn">Choisir Standard</a>
+        </article>
+
+        <article class="pricing-card" aria-label="Offre Premium">
+          <h3>Premium</h3>
+          <p class="price">79&nbsp;$/mois</p>
+          <ul>
+            <li>Accès illimité à la salle</li>
+            <li>Tous les cours collectifs inclus</li>
+            <li>Coaching personnalisé chaque semaine</li>
+            <li>Programme nutrition avancé</li>
+            <li>Suivi via application mobile</li>
+          </ul>
+          <a href="#inscription" class="btn">Choisir Premium</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Horaires ===== -->
+    <section id="horaires" aria-labelledby="titre-horaires">
+      <h2 id="titre-horaires">Horaires des cours</h2>
+
+      <form id="filtres-horaires" aria-label="Filtres des cours">
+        <fieldset>
+          <legend>Filtrer les cours</legend>
+
+          <label for="filtre-type">Type de cours</label>
+          <select name="type" id="filtre-type">
+            <option value="tous">Tous</option>
+            <option value="yoga">Yoga</option>
+            <option value="hiit">HIIT</option>
+            <option value="cardio">Cardio</option>
+            <option value="boxe">Boxe</option>
+            <option value="musculation">Musculation</option>
+          </select>
+
+          <label for="filtre-coach">Coach</label>
+          <select name="coach" id="filtre-coach">
+            <option value="tous">Tous</option>
+            <option value="hiba">Hiba</option>
+            <option value="yasmine">Yasmine</option>
+            <option value="khadija">Khadija</option>
+            <option value="oussama">Oussama</option>
+            <option value="ali">Ali</option>
+          </select>
+
+          <label for="filtre-niveau">Niveau</label>
+          <select name="niveau" id="filtre-niveau">
+            <option value="tous">Tous</option>
+            <option value="debutant">Débutant</option>
+            <option value="intermediaire">Intermédiaire</option>
+            <option value="avance">Avancé</option>
+          </select>
+
+          <button type="submit">Appliquer</button>
+        </fieldset>
+      </form>
+
+      <aside aria-live="polite">
+        <p><strong>Prochain cours :</strong> 18:00 – HIIT (Coach Yasmine)</p>
+      </aside>
+
+      <div class="table-wrapper">
+        <table aria-label="Planning hebdomadaire">
+          <caption class="sr-only">Planning hebdomadaire des cours</caption>
+          <thead>
+            <tr>
+              <th scope="col">Heure</th>
+              <th scope="col">Lundi</th>
+              <th scope="col">Mardi</th>
+              <th scope="col">Mercredi</th>
+              <th scope="col">Jeudi</th>
+              <th scope="col">Vendredi</th>
+              <th scope="col">Samedi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">08:00</th>
+              <td>
+                <strong data-type="yoga" data-level="debutant" data-coach="yasmine">Yoga</strong><br>
+                <small>Yasmine — Salle A</small><br>
+                <a href="#inscription">Réserver</a>
+              </td>
+              <td></td>
+              <td>
+                <strong data-type="cardio" data-level="intermediaire" data-coach="ali">Cardio</strong><br>
+                <small>Ali — Salle B</small><br>
+                <a href="#inscription">Réserver</a>
+              </td>
+              <td></td>
+              <td>
+                <strong data-type="hiit" data-level="avance" data-coach="oussama">HIIT</strong><br>
+                <small>Oussama — Salle C</small><br>
+                <a href="#inscription">Réserver</a>
+              </td>
+              <td>
+                <strong data-type="boxe" data-level="avance" data-coach="khadija">Boxe</strong><br>
+                <small>Khadija — Salle D</small><br>
+                <a href="#inscription">Réserver</a>
+              </td>
+            </tr>
+
+            <tr>
+              <th scope="row">12:00</th>
+              <td></td>
+              <td>
+                <strong data-type="musculation" data-level="avance" data-coach="hiba">Musculation</strong><br>
+                <small>Hiba — Salle A</small><br>
+                <a href="#inscription">Réserver</a>
+              </td>
+              <td></td>
+              <td>
+                <strong data-type="cardio" data-level="intermediaire" data-coach="ali">Cardio</strong><br>
+                <small>Ali — Salle D</small><br>
+                <a href="#inscription">Réserver</a>
+              </td>
+              <td>
+                <strong data-type="boxe" data-level="avance" data-coach="khadija">Boxe</strong><br>
+                <small>Khadija — Salle E</small><br>
+                <a href="#inscription">Réserver</a>
+              </td>
+              <td></td>
+            </tr>
+
+            <tr>
+              <th scope="row">18:00</th>
+              <td>
+                <strong data-type="musculation" data-level="avance" data-coach="hiba">Musculation</strong><br>
+                <small>Hiba — Salle D</small><br>
+                <a href="#inscription">Réserver</a>
+              </td>
+              <td>
+                <strong data-type="cardio" data-level="intermediaire" data-coach="ali">Cardio</strong><br>
+                <small>Ali — Salle E</small><br>
+                <a href="#inscription">Réserver</a>
+              </td>
+              <td></td>
+              <td>
+                <strong data-type="hiit" data-level="avance" data-coach="oussama">HIIT</strong><br>
+                <small>Oussama — Salle C</small><br>
+                <a href="#inscription">Réserver</a>
+              </td>
+              <td>
+                <strong data-type="yoga" data-level="debutant" data-coach="yasmine">Yoga</strong><br>
+                <small>Yasmine — Salle A</small><br>
+                <a href="#inscription">Réserver</a>
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===== Inscription ===== -->
+    <section id="inscription" aria-labelledby="inscription-title">
+      <h2 id="inscription-title">Inscription</h2>
+      <form action="#" method="post" class="form-inscription" novalidate>
+        <label for="nom">Nom complet</label>
+        <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" autocomplete="name" required>
+
+        <label for="email">Adresse e-mail</label>
+        <input type="email" id="email" name="email" placeholder="exemple@gmail.com" autocomplete="email" required>
+
+        <label for="pack">Choisissez votre pack</label>
+        <select id="pack" name="pack" required>
+          <option value="basic">Basic - 29&nbsp;$/mois</option>
+          <option value="standard">Standard - 49&nbsp;$/mois</option>
+          <option value="premium">Premium - 79&nbsp;$/mois</option>
+        </select>
+
+        <button type="submit" class="btn-primary">S’inscrire</button>
+      </form>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <p>📍 Adresse : 123 Rue Fitness, Montréal</p>
+      <p>📧 Email : <a href="mailto:contact@fitzone.com">contact@fitzone.com</a></p>
+      <p>📞 Téléphone : <a href="tel:+15145551234">+1&nbsp;514&nbsp;555&nbsp;1234</a></p>
+
+      <div class="reseaux">
+        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook (nouvelle fenêtre)">
+          <i class="fab fa-facebook-f" aria-hidden="true"></i><span class="sr-only">Facebook</span>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram (nouvelle fenêtre)">
+          <i class="fab fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span>
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube (nouvelle fenêtre)">
+          <i class="fab fa-youtube" aria-hidden="true"></i><span class="sr-only">YouTube</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 FitZone — Tous droits réservés.</p>
+    <nav class="footer-links" aria-label="Liens de pied de page">
+      <a href="#">Mentions légales</a> |
+      <a href="#">Politique de confidentialité</a> |
+      <a href="#contact">Contact</a>
+    </nav>
+  </footer>
 </body>
+<script>
+  /* FitZone – Interactivité globale*/
+
+document.addEventListener("DOMContentLoaded", () => {
+  //  Menu burger (mobile)
+  const burger = document.querySelector(".burger");
+  const menu = document.querySelector("nav ul");
+  if (burger && menu) {
+    burger.addEventListener("click", () => {
+      menu.classList.toggle("open");
+      burger.classList.toggle("active");
+      burger.setAttribute("aria-expanded", menu.classList.contains("open"));
+    });
+  }
+
+  //  Sélecteurs & helpers planning
+  const formFiltres = document.getElementById("filtres-horaires");
+  const selectType = document.getElementById("filtre-type");
+  const selectCoach = document.getElementById("filtre-coach");
+  const selectNiveau = document.getElementById("filtre-niveau");
+  const aside = document.querySelector("#horaires aside p");
+
+  // Chaque case de cours = <td> qui contient un <strong data-...>
+  const getCoursCells = () =>
+    Array.from(
+      document.querySelectorAll("#horaires tbody td")
+    );
+
+  const parseTime = (hhmm) => {
+    const [h, m] = hhmm.split(":").map(Number);
+    const d = new Date();
+    d.setHours(h, m, 0, 0);
+    return d;
+  };
+
+  // Récupère la liste des créneaux horaires (08:00, 12:00, 18:00) à partir de la première colonne
+  const getHeuresDuTableau = () => {
+    return Array.from(document.querySelectorAll('#horaires tbody th[scope="row"]'))
+      .map(th => th.textContent.trim())
+      .filter(Boolean);
+  };
+
+  //  Persistence (localStorage)
+  const PERSIST_KEY = "fitzone-filtres";
+  const saveFiltres = () => {
+    const payload = {
+      type: selectType?.value || "tous",
+      coach: selectCoach?.value || "tous",
+      niveau: selectNiveau?.value || "tous",
+      search: searchInput?.value || ""
+    };
+    localStorage.setItem(PERSIST_KEY, JSON.stringify(payload));
+  };
+  const loadFiltres = () => {
+    try {
+      const raw = localStorage.getItem(PERSIST_KEY);
+      if (!raw) return;
+      const { type, coach, niveau, search } = JSON.parse(raw);
+      if (selectType && type) selectType.value = type;
+      if (selectCoach && coach) selectCoach.value = coach;
+      if (selectNiveau && niveau) selectNiveau.value = niveau;
+      if (searchInput && typeof search === "string") searchInput.value = search;
+    } catch {}
+  };
+
+  // ------------------------------
+  // 4) UI dynamique (barre de recherche + boutons)
+  // ------------------------------
+  // Ajoute une barre de recherche texte (type/coach/niveau + mot-clé)
+  // Mot-clé matche: texte du <strong> (ex: "Yoga") + <small> (coach / salle)
+  const toolbar = document.createElement("div");
+  toolbar.className = "horaires-toolbar";
+  toolbar.style.display = "flex";
+  toolbar.style.gap = "8px";
+  toolbar.style.margin = "10px 0";
+
+  const searchInput = document.createElement("input");
+  searchInput.type = "search";
+  searchInput.placeholder = "Rechercher (cours, coach, salle)";
+  searchInput.ariaLabel = "Rechercher dans le planning";
+  Object.assign(searchInput.style, {
+    flex: "1",
+    padding: ".6rem .8rem",
+    borderRadius: "12px",
+    border: "1px solid #243041",
+    background: "#0b1220",
+    color: "#e5e7eb",
+  });
+
+  const btnReset = document.createElement("button");
+  btnReset.type = "button";
+  btnReset.textContent = "Réinitialiser";
+  Object.assign(btnReset.style, {
+    padding: ".6rem .9rem",
+    borderRadius: "12px",
+    border: "1px solid #243041",
+    background: "#0f172a",
+    color: "#e5e7eb",
+    cursor: "pointer",
+    fontWeight: "700",
+  });
+
+  const btnExport = document.createElement("button");
+  btnExport.type = "button";
+  btnExport.textContent = "Exporter CSV";
+  Object.assign(btnExport.style, {
+    padding: ".6rem .9rem",
+    borderRadius: "12px",
+    border: "1px solid #243041",
+    background: "#0f172a",
+    color: "#e5e7eb",
+    cursor: "pointer",
+    fontWeight: "700",
+  });
+
+  // Insère la toolbar sous le formulaire
+  if (formFiltres?.parentElement) {
+    formFiltres.parentElement.insertBefore(toolbar, formFiltres.nextElementSibling);
+    toolbar.append(searchInput, btnReset, btnExport);
+  }
+
+  //  Filtrage principal
+  
+  const matchTexte = (needle, haystack) =>
+    haystack.toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu,"")
+      .includes(
+        needle.toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu,"")
+      );
+
+  const applyFilters = () => {
+    const type = selectType?.value || "tous";
+    const coach = selectCoach?.value || "tous";
+    const niveau = selectNiveau?.value || "tous";
+    const keyword = (searchInput?.value || "").trim();
+
+    let visibleCount = 0;
+
+    getCoursCells().forEach((td) => {
+      const strong = td.querySelector("strong");
+      if (!strong) { td.style.display = ""; return; }
+
+      const dataType = strong.getAttribute("data-type") || "";
+      const dataCoach = strong.getAttribute("data-coach") || "";
+      const dataLevel = strong.getAttribute("data-level") || "";
+
+      // Filtre par selects
+      const okType   = (type === "tous")   || (dataType === type);
+      const okCoach  = (coach === "tous")  || (dataCoach === coach);
+      const okNiveau = (niveau === "tous") || (dataLevel === niveau);
+
+      // Filtre par mot-clé (dans le libellé du strong OU le small "Coach — Salle")
+      let okKeyword = true;
+      if (keyword.length > 0) {
+        const small = td.querySelector("small");
+        const text = `${strong.textContent || ""} ${(small?.textContent || "")}`;
+        okKeyword = matchTexte(keyword, text);
+      }
+
+      const show = okType && okCoach && okNiveau && okKeyword;
+      td.style.display = show ? "" : "none";
+      if (show) visibleCount++;
+    });
+
+    // Met à jour "prochain cours" + compteur
+    updateProchainCoursMessage();
+    updateCompteur(visibleCount);
+
+    // Sauve l'état des filtres
+    saveFiltres();
+  };
+
+  //  Prochain cours (selon filtres & heure)
+  const updateProchainCoursMessage = () => {
+    const heures = getHeuresDuTableau(); // ["08:00","12:00","18:00"]
+    const now = new Date();
+
+    // On balaye le tableau et on fabrique une liste d'objets {date, label, td}
+    const candidats = [];
+
+    const rows = Array.from(document.querySelectorAll("#horaires tbody tr"));
+    rows.forEach((tr, rowIndex) => {
+      const heure = heures[rowIndex]; // alignement par index
+      if (!heure) return;
+      const baseDate = parseTime(heure);
+
+      const tds = Array.from(tr.querySelectorAll("td"));
+      tds.forEach((td) => {
+        if (td.style.display === "none") return; // cellule masquée par les filtres
+        const strong = td.querySelector("strong");
+        const small = td.querySelector("small");
+        if (!strong || !small) return;
+
+        // Crée une date candidate (aujourd'hui) pour la comparaison
+        const dateCandidate = new Date(baseDate.getTime());
+        if (dateCandidate > now) {
+          const label = `${heure} – ${strong.textContent.trim()} (${small.textContent.trim()})`;
+          candidats.push({ date: dateCandidate, label, td });
+        }
+      });
+    });
+
+    // Trie les candidats par date et prend le premier
+    candidats.sort((a, b) => a.date - b.date);
+    const next = candidats[0];
+
+    if (aside) {
+      if (next) {
+        aside.innerHTML = `<strong>Prochain cours :</strong> ${next.label}`;
+      } else {
+        // Aucun cours restant aujourd'hui (ou tout est filtré)
+        aside.innerHTML = `<strong>Prochain cours :</strong> Aucun cours disponible selon vos filtres.`;
+      }
+    }
+  };
+
+  //  Compteur des cours visibles
+  const updateCompteur = (count) => {
+    // Ajoute (ou met à jour) un petit badge à côté du titre "Horaires des cours"
+    const title = document.getElementById("titre-horaires");
+    if (!title) return;
+
+    let badge = title.querySelector(".badge-count");
+    if (!badge) {
+      badge = document.createElement("span");
+      badge.className = "badge-count";
+      badge.style.marginLeft = "8px";
+      badge.style.fontSize = ".85rem";
+      badge.style.fontWeight = "700";
+      badge.style.padding = ".18rem .45rem";
+      badge.style.borderRadius = "999px";
+      badge.style.background = "rgba(34,211,238,.15)";
+      badge.style.border = "1px solid rgba(34,211,238,.35)";
+      badge.style.color = "#e5e7eb";
+      title.appendChild(badge);
+    }
+    badge.textContent = `${count} cours visibles`;
+  };
+
+  //  Export CSV (planning filtré)
+  const exportCSV = () => {
+    // En-têtes
+    const headers = ["Heure", "Jour", "Cours", "Détails"];
+    const rows = [];
+
+    const jours = Array.from(
+      document.querySelectorAll("#horaires thead th")
+    )
+      .map((th) => th.textContent.trim())
+      .slice(1); // ignore la première colonne "Heure"
+
+    const heures = getHeuresDuTableau();
+    const trList = Array.from(document.querySelectorAll("#horaires tbody tr"));
+
+    trList.forEach((tr, rowIdx) => {
+      const tds = Array.from(tr.querySelectorAll("td"));
+      tds.forEach((td, colIdx) => {
+        if (td.style.display === "none") return;
+        const strong = td.querySelector("strong");
+        const small = td.querySelector("small");
+        if (!strong) return;
+
+        const heure = heures[rowIdx] || "";
+        const jour = jours[colIdx] || "";
+        const cours = (strong.textContent || "").trim();
+        const details = (small?.textContent || "").trim();
+        rows.push([heure, jour, cours, details]);
+      });
+    });
+
+    // Construit le CSV
+    const escape = (s) => `"${String(s).replace(/"/g, '""')}"`;
+    const csv = [headers.map(escape).join(","), ...rows.map(r => r.map(escape).join(","))].join("\n");
+
+    // Télécharge
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    const ts = new Date().toISOString().slice(0,19).replace(/[:T]/g,"-");
+    a.href = url;
+    a.download = `fitzone-planning-${ts}.csv`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  //  Validation formulaire (simple)
+  const formInscription = document.querySelector(".form-inscription");
+  if (formInscription) {
+    formInscription.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const nom = document.getElementById("nom")?.value.trim();
+      const email = document.getElementById("email")?.value.trim();
+      const pack = document.getElementById("pack")?.value;
+
+      if (!nom || !email) {
+        alert("Veuillez remplir tous les champs obligatoires.");
+        return;
+      }
+      alert(`Merci ${nom} ! Ton inscription au pack "${pack}" est enregistrée.`);
+      formInscription.reset();
+      // Réapplique les filtres pour tenir compte d'une éventuelle recherche persistée
+      applyFilters();
+    });
+  }
+
+  // filtres + recherche + reset + export
+  
+  const reapplyOnChange = () => applyFilters();
+
+  if (formFiltres) {
+    formFiltres.addEventListener("submit", (e) => {
+      e.preventDefault();
+      applyFilters();
+    });
+  }
+  selectType?.addEventListener("change", reapplyOnChange);
+  selectCoach?.addEventListener("change", reapplyOnChange);
+  selectNiveau?.addEventListener("change", reapplyOnChange);
+
+  // Recherche instantanée (debounce)
+  const debounce = (fn, delay = 180) => {
+    let t;
+    return (...args) => {
+      clearTimeout(t);
+      t = setTimeout(() => fn.apply(null, args), delay);
+    };
+  };
+  searchInput.addEventListener("input", debounce(() => applyFilters(), 150));
+
+  btnReset.addEventListener("click", () => {
+    if (selectType) selectType.value = "tous";
+    if (selectCoach) selectCoach.value = "tous";
+    if (selectNiveau) selectNiveau.value = "tous";
+    searchInput.value = "";
+    applyFilters();
+  });
+
+  btnExport.addEventListener("click", exportCSV);
+
+  //  Initialisation
+  loadFiltres();         
+  applyFilters();        
+});
+
+</script>
 </html>
